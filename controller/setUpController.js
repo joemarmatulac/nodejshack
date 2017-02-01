@@ -17,7 +17,7 @@ var starterTodos = [
 function initializeTodo(app) {
     app.get('/api/setupTodos', (req, res) => {
         return new Promise((resolve, reject) => {
-            todos.create(todosModel, (error, result) => {
+            todos.create(starterTodos, (error, result) => {
                 if (error) reject(error);
                 else resolve(result);
             });
